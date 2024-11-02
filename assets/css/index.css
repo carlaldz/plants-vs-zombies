@@ -1,0 +1,75 @@
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 2em;
+    z-index: 10;
+  }
+  
+  #canvas {
+    border: 1px solid black;
+    display: none; /* El canvas solo se muestra cuando el juego está en progreso */
+  }
+
+ #start-screen {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 600px; 
+    background-image: url('/assets/images/Note.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-color: green;
+ } 
+
+#start-button {
+    position: absolute; /* Use absolute positioning */
+    top: 523px; /* Distance from the top */
+    left: 600px; /* Distance from the left */
+    background-color: brown;
+    padding: 4px 10px; /* Increase the padding for bigger buttons */
+    font-size: 0.6em;
+}
+#game-over-screen {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 600px; 
+    background-position: center;
+    background-image: url('/assets/images/Game over.png');
+    background-size: contain;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-color: black;
+
+}
+#restart-button {
+    position: absolute; /* Use absolute positioning */
+    top: 530px; /* Distance from the top */
+    left: 490px; /* Distance from the left */
+    background-color: red;
+    
+}
+#home-button {
+    position: absolute; /* Use absolute positioning */
+    top: 530px; /* Distance from the top */
+    left: 690px; /* Distance from the left */
+    background-color: white;
+    
+}
+
+#home-button, #restart-button {
+    padding: 10px 20px; /* Increase the padding for bigger buttons */
+    font-size: 1em; /* Increase the font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
