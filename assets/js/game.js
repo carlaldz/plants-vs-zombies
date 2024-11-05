@@ -1,8 +1,13 @@
 class Game {
-    constructor(ctx) {
+    constructor(ctx, onGameOver) {
       this.ctx = ctx;
   
       this.background = new Background(ctx);
+
+      this.endGame = false; 
+      this.onGameOver = onGameOver;
+      const goToNoteScreenButton = document.getElementById('go-to-note-screen-button');
+      const restartButton = document.getElementById('restart-button');
     
       this.sunflowerCard = new SunflowerCard (ctx); 
       this.peashooterCard = new PeashooterCard (ctx); 
@@ -177,16 +182,40 @@ class Game {
           this.addBullet();
           this.checkShooting();
           this.checkCollisions();
-           
+          this.gameOver(); 
 
           this.tick++;
-
-          if (this.tick >= 700) {
-            this.tick = 0;
-            this.addZombie();
-          }
+          if (this.tick <= 3200) {
+            if (this.tick % 700 === 0) {
+                this.addZombie();
+            }
+        }
+        if (this.tick > 3200 && this.tick <= 4500) {
+            if (this.tick % 200 === 0) {
+                this.addZombie();
+            }
+        }
+        if (this.tick > 4500 && this.tick <= 9000) {
+            if (this.tick % 300 === 0) {
+                this.addZombie();
+            }
+        }
+        if (this.tick > 9000 && this.tick <= 11000) {
+            if (this.tick % 150 === 0) {
+                this.addZombie();
+            }
+        }
+        if (this.tick > 16000 && this.zombies.length === 0) {
+            this.img = new Image();
+            this.img.src = "assets/images/—Pngtree—fashion gradient game victory cartoon_5487174.png";
+            this.ctx.drawImage(this.img, 600, 100, 600, 600);
+            
+        }
+        
+        
       }, 1000 / 60);    
     }
+
 
     draw() {
        
@@ -304,7 +333,7 @@ class Game {
       
       this.ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
       this.img = new Image (this.ctx);
-      this.img.src = "/assets/images/sol.png";
+      this.img.src = "assets/images/sol.png";
       this.ctx.drawImage (this.img, rectX + textWidth + 15, rectY + 5, 30, 30);
       this.ctx.fillStyle = "black";
       this.ctx.fillText(text, rectX + 10, rectY + 25);
@@ -314,5 +343,15 @@ class Game {
     return this.plants.some(plant => 
       Math.abs(plant.x - x) < 10 && Math.abs(plant.y - y) < 10
     );
+  }
+
+  gameOver(){
+    this.zombies.forEach(zombie => {
+     if (zombie.x < 150){
+      this.endGame = true; 
+      this.onGameOver();
+     }
+      
+  });
   }
 }

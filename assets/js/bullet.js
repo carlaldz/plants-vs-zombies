@@ -6,7 +6,7 @@ class Bullet {
         
         this.speed = 5; 
         this.img = new Image(); 
-        this.img.src = "/assets/images/pea.png";  
+        this.img.src = "assets/images/pea.png";  
 
         this.w = 30; 
         this.h = 30; 

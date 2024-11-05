@@ -74,7 +74,7 @@ class Peashooter extends Plant {
         //this.bullets = [];
 
         this.img = new Image(); 
-        this.img.src = "/assets/images/peashooter sprite separado.png";  //BUG, está un poco feo
+        this.img.src = "assets/images/peashooter sprite separado.png";  //BUG, está un poco feo
         this.img.frames = 8; 
         this.img.frameIndex = 0; 
     }
@@ -95,7 +95,7 @@ class Sunflower extends Plant {
         this.h = 75; 
 
         this.img = new Image(); 
-        this.img.src = "/assets/images/sunflower.png";
+        this.img.src = "assets/images/sunflower.png";
         this.img.frames = 6; 
         this.img.frameIndex = 0;
     }
@@ -117,7 +117,7 @@ class Nut extends Plant {
         this.h = 75; 
 
         this.img = new Image(); 
-        this.img.src = "/assets/images/nuez.png"; //Meter imagen nuez
+        this.img.src = "assets/images/nuez.png"; //Meter imagen nuez
         this.img.frames = 5; 
         this.img.frameIndex = 0;
     }
@@ -172,30 +172,30 @@ class Cards {
 
 class SunflowerCard extends Cards {
     constructor(ctx) {
-        super(ctx, 35, 50, 90, 150, "/assets/images/sunflower card color.png", "sunflower");
+        super(ctx, 35, 50, 90, 150, "assets/images/sunflower card color.png", "sunflower");
         this.plantType = 'sunflower';
         this.price = 50;
-        this.bnw.src = "/assets/images/sun cartas wnb.png"
+        this.bnw.src = "assets/images/sun cartas wnb.png"
     }
     
 }
 
 class PeashooterCard extends Cards {
     constructor(ctx) {
-        super(ctx, 35, 200, 90, 150, "/assets/images/pea carta color.png", "peashooter");
+        super(ctx, 35, 200, 90, 150, "assets/images/pea carta color.png", "peashooter");
         this.plantType = 'peashooter';
         this.price = 100;
-        this.bnw.src = "/assets/images/pea cartas wnb.png"
+        this.bnw.src = "assets/images/pea cartas wnb.png"
     }
     
 }
 
 class NutCard extends Cards {
     constructor(ctx) {
-        super(ctx, 35, 350, 90, 150, "/assets/images/nut card color.png", "nut");
+        super(ctx, 35, 350, 90, 150, "assets/images/nut card color.png", "nut");
         this.plantType = 'nut'; 
         this.price = 50;
-        this.bnw.src = "/assets/images/nut cartas wnb.png"
+        this.bnw.src = "assets/images/nut cartas wnb.png"
     }
     
 }

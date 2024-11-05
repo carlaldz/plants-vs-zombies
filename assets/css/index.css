@@ -19,18 +19,28 @@
     display: none; /* El canvas solo se muestra cuando el juego está en progreso */
   }
 
+ #note-screen {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 600px; 
+    background-image: url('assets/images/Note.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-color: green;
+ } 
  #start-screen {
     display: flex; 
     justify-content: center; 
     align-items: center; 
     height: 600px; 
-    background-image: url('/assets/images/Note.png');
+    background-image: url('assets/images/Start Screen.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-color: green;
+    background-color: black;
  } 
-
 #start-button {
     position: absolute; /* Use absolute positioning */
     top: 523px; /* Distance from the top */
@@ -45,7 +55,7 @@
     align-items: center; 
     height: 600px; 
     background-position: center;
-    background-image: url('/assets/images/Game over.png');
+    background-image: url('assets/images/Game over.png');
     background-size: contain;
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-color: black;
@@ -66,10 +76,22 @@
     
 }
 
-#home-button, #restart-button {
+#home-button, #restart-button{
     padding: 10px 20px; /* Increase the padding for bigger buttons */
     font-size: 1em; /* Increase the font size */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Change cursor on hover */
+}
+
+#go-to-note-screen-button {
+    padding: 5px 10px; /* Increase the padding for bigger buttons */
+    font-size: 0.45em; /* Increase the font size */
+    border-radius: 35px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    background-color : brown; 
+    position: absolute; /* Use absolute positioning */
+    top: 487px; /* Distance from the top */
+    left: 597px;
+   
 }

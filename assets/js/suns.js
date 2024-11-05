@@ -4,7 +4,7 @@ class Suns {
         this.x = x + 7;          
         this.y = y;          
         this.img = new Image();
-        this.img.src = "/assets/images/sol.png";
+        this.img.src = "assets/images/sol.png";
         this.speedY = 1;     
         this.maxRise = 50;   
         this.risen = 0;      

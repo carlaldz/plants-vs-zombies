@@ -18,12 +18,12 @@ class Zombie {
         this.iscolliding = false; 
 
         this.img = new Image(); 
-        this.img.src = "/assets/images/walking zombie no fondo.png";
+        this.img.src = "assets/images/walking zombie no fondo.png";
         this.img.frames = 7; 
         this.img.frameIndex = 0;
 
         this.eat = new Image(); 
-        this.eat.src = "/assets/images/zombie eating.png"
+        this.eat.src = "assets/images/zombie eating.png"
     }
     drawWalking(){
         const frameWidth = this.img.width / this.img.frames;
@@ -96,7 +96,7 @@ class Zombie {
     handleCollision (){
         this.iscolliding = true; 
         this.vx = 0; 
-        this.img.source = "/assets/images/zombie eating.png"
+        this.img.source = "assets/images/zombie eating.png"
         //Cambiar la imagen a zombie comiendo 
     }
 }
