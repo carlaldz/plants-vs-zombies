@@ -1,7 +1,7 @@
 # plants-vs-zombies
 
 <br>
-[Play the Game Here](https://carlaldz.github.io/plants-vs-zombies/)
+https://carlaldz.github.io/plants-vs-zombies/
 
 ## Learning Goals
 <details>
