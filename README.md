@@ -5,7 +5,29 @@
 
 ## Learning Goals
 <details>
- This project allowed me to put into practice various programming skills covered in the first module of the bootcamp. Through this game, I combined DOM and Canvas manipulation with integrating multiple screens, buttons, movement, and objects, making this project a culmination of what I've learned so far.
+This project was the perfect way to put into action a lot of the skills covered in the first module of the bootcamp. Here's a quick breakdown of what went into (and what I suffered with) building it:
+
+### JavaScript Basics
+- **Data Handling**: Worked with arrays, objects, and classes to keep track of all game elements like plants, zombies, and bullets.
+- **Event Handling**: Set up event listeners so the game reacts to player actions, like clicking cards and planting defenses.
+- **Game Flow**: Used conditionals, loops, and timers to manage the pace of the game, from zombie waves to sun generation and plant placements.
+
+### Object-Oriented Programming (OOP)
+- **Organized Code**: Split the game into classes for each main piece (plants, zombies, bullets, and the game board) for cleaner, more reusable code.
+- **Inheritance**: Created specialized plants and zombies with unique health, attack, and movement properties, all based on a common blueprint.
+- **Custom Behavior**: Tweaked subclasses for unique behaviors, so Peashooters, for example, fire projectiles, and zombies shuffle toward the house.
+
+### DOM Manipulation + Canvas
+- **Canvas & DOM Combined**: Mixed HTML elements (buttons, UI) with Canvas drawing, making the game’s action smooth and dynamic.
+- **Screen Transitions**: Built out various screens and their transitions — think start menu, victory, defeat — all controlled through the DOM.
+
+### Game Logic + State Management
+- **Collision Logic**: Wrote rules to detect and handle interactions between game elements (like bullets hitting zombies).
+- **Timing**: Used `setInterval` and frame ticks to manage spawning, production, and game pacing for a real-time feel.
+
+### Scalable + Expandable Code
+- **Extensibility**: Built the code so that adding new plants and zombies with unique abilities is a breeze.
+- **Future-Proofing**: Added placeholders to easily expand on the game, like player stats, more levels, and new game modes down the line.
 
   <br>
 
