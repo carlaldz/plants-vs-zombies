@@ -1,14 +1,16 @@
 class Game {
     constructor(ctx, onGameOver) {
       this.ctx = ctx;
-  
+
       this.background = new Background(ctx);
+
+      this.homeButton = document.getElementById('home-button');
+      this.playAgainButton = document.getElementById('play-again-button');
+
 
       this.endGame = false; 
       this.onGameOver = onGameOver;
-      const goToNoteScreenButton = document.getElementById('go-to-note-screen-button');
-      const restartButton = document.getElementById('restart-button');
-    
+      
       this.sunflowerCard = new SunflowerCard (ctx); 
       this.peashooterCard = new PeashooterCard (ctx); 
       this.nutCard = new NutCard(ctx);
@@ -190,7 +192,7 @@ class Game {
                 this.addZombie();
             }
         }
-        if (this.tick > 3200 && this.tick <= 4500) {
+        /*if (this.tick > 3200 && this.tick <= 4500) {
             if (this.tick % 200 === 0) {
                 this.addZombie();
             }
@@ -204,12 +206,13 @@ class Game {
             if (this.tick % 150 === 0) {
                 this.addZombie();
             }
-        }
-        if (this.tick > 16000 && this.zombies.length === 0) {
+        }*/
+        if (this.tick > 3200 && this.zombies.length === 0) {
             this.img = new Image();
             this.img.src = "assets/images/—Pngtree—fashion gradient game victory cartoon_5487174.png";
-            this.ctx.drawImage(this.img, 600, 100, 600, 600);
-            
+            this.ctx.drawImage(this.img, 400, 30, 600, 600);
+            this.homeButton.style.display = 'inline-block';
+            this.playAgainButton.style.display = 'inline-block';
         }
         
         

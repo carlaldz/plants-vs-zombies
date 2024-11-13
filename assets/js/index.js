@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('canvas');
     const startButton = document.getElementById('start-button');
     const goToNoteScreenButton = document.getElementById('go-to-note-screen-button'); // New button
-    const startGameFromNoteButton = document.getElementById('start-game-from-note-button'); // New button
     const restartButton = document.getElementById('restart-button'); 
     const homeButton = document.getElementById('home-button'); 
+    const playAgainButton = document.getElementById ('play-again-button');
     const ctx = canvas.getContext('2d');
     let game; 
 
@@ -33,7 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
         game.start();
     });
 
-    // Restart button to restart the game from gameOverScreen
+    homeButton.addEventListener('click', () => {
+        startScreen.style.display = 'none';
+        gameOverScreen.style.display = 'none';
+        canvas.style.display = 'none';
+        noteScreen.style.display = 'flex';
+    });
+
     restartButton.addEventListener('click', () => {
         game = new Game(ctx, showGameOverScreen);
         startScreen.style.display = 'none';
@@ -43,10 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
         game.start();
     });
 
+    
 
-    // Show game over screen when game ends
     function showGameOverScreen() {
         canvas.style.display = 'none';
         gameOverScreen.style.display = 'flex';
+        homeButton.style.display = 'inline-block';
+        restartButton.style.display = 'inline-block';
     }
 });

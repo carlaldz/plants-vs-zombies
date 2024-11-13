@@ -64,7 +64,15 @@
 #restart-button {
     position: absolute; /* Use absolute positioning */
     top: 530px; /* Distance from the top */
-    left: 490px; /* Distance from the left */
+    left: 480px; /* Distance from the left */
+    background-color: red;
+    
+}
+
+#play-again-button {
+    position: absolute; /* Use absolute positioning */
+    top: 530px; /* Distance from the top */
+    left: 480px; /* Distance from the left */
     background-color: red;
     
 }
@@ -76,7 +84,7 @@
     
 }
 
-#home-button, #restart-button{
+#home-button, #restart-button, #play-again-button{
     padding: 10px 20px; /* Increase the padding for bigger buttons */
     font-size: 1em; /* Increase the font size */
     border: none; /* Remove border */
@@ -94,4 +102,8 @@
     top: 487px; /* Distance from the top */
     left: 597px;
    
+}
+
+#home-button, #play-again-button {
+    display: none;
 }
